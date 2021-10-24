@@ -8,14 +8,23 @@ systemctl restart systemd-logind.service
 2) cat /etc/*-release
 3) python3 --version
 4) dpkg -l | grep rospy || pip show rospy
-5) sudo apt-get install lm-sensors | sudo sensors-detect -y
+5) sudo apt-get install lm-sensors | sudo sensors-detect 
 6) --
 7) cat /sys/devices/virtual/dmi/id/board_{vendor,name,version} // Or // sudo dmidecode -t 2
 8) mcu_id
 9) vmstat -s //1st line
 10) timedatectl
 11) ssh//cat /etc/*-release
----A3
+---A3 
+file wpa_supplicant.conf
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev 
+update_config=1 
+country=RU 
+network={ssid="HomeKit"
+        psk="MyHomeSprut.ai"
+        key_mgmt=WPA-PSK}
+file ssh
+touch ssh
 ssh pi@ip
 1) sudo mcedit /etc/wpa_supplicant/wpa_supplicant.conf
     network={
