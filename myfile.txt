@@ -1,0 +1,45 @@
+Part A
+---A1
+sudo hostnamectl set-hostname turtlebroXX
+sudo nano /etc/hosts //-> поменять 127.0.0.1 старое_имя
+systemctl restart systemd-logind.service
+---A2
+1) cat /etc/*-release
+2) cat /etc/*-release
+3) python3 --version
+4) dpkg -l | grep rospy || pip show rospy
+5) sudo apt-get install lm-sensors | sudo sensors-detect -y
+6) --
+7) cat /sys/devices/virtual/dmi/id/board_{vendor,name,version} // Or // sudo dmidecode -t 2
+8) mcu_id
+9) vmstat -s //1st line
+10) timedatectl
+11) ssh//cat /etc/*-release
+---A3
+ssh pi@ip
+1) sudo mcedit /etc/wpa_supplicant/wpa_supplicant.conf
+    network={
+    ssid="FieldBase_2.4G" 
+    psk="WSSR2021"
+    }
+    Сохраните файл и перезагрузите raspberry.
+   iwconfig
+2) sudo mcedit /etc/wpa_supplicant/wpa_supplicant.conf
+    network={
+    ssid="FieldBase_5G" 
+    psk="WSSR2021"
+    }
+    Сохраните файл и перезагрузите raspberry.
+iwconfig
+---A4
+1) rostopic list
+2) 
+---A5
+
+---A6
+
+---A7
+
+---A8
+
+---A9
